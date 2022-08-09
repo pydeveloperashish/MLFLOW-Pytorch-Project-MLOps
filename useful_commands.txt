@@ -1,4 +1,7 @@
-conda create --prefix ./env python=3.7.6 -y && conda activate ./env
+touch init_setup.sh
+# Write this under init_setup.sh 
+    :-conda create --prefix ./env python=3.7.6 -y && conda activate ./env
+bash init_setup.sh 
 
 mlflow run https://github.com/pydeveloperashish/MLFLOW-Project-MLOps-02.git -P --alpha=0.4 --l1_ratio=0.7 --no-conda
 
