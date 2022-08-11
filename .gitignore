@@ -2,3 +2,4 @@ env/
 ENV/
 .env/
 data/
+*.bin
