@@ -70,8 +70,12 @@ def train(config_path):
     for epoch in range(1, config['params']['EPOCHS'] + 1):
         train_(config, scripted_model, config['DEVICE'], train_loader, optimizer, epoch)
         scheduler.step()
-        
     
+        
+    with mlflow.start_run(run_name = "training") as run:
+        mlflow.log_params(config['params'])
+        mlflow.pytorch.log_model(model, "model")
+        
             
 if __name__ == "__main__":
     args = argparse.ArgumentParser()

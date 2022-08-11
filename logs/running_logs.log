@@ -243,3 +243,156 @@ AttributeError: 'dict' object has no attribute 'DRY_RUN'
 [2022-08-11 15:46:46,266:  INFO: model_utils]:  model_config is loaded from artifacts/model_config/train_loader.bin
 [2022-08-11 15:49:24,458:  INFO: stage_02_train]:  Stage two completed!!! >>>>>
 
+[2022-08-11 16:12:55,785:  INFO: stage_01_prepare_data]:  >>>>> Stage one started
+[2022-08-11 16:12:55,787:  INFO: all_utils]:  yaml file: configs/config.yaml loaded successfully
+[2022-08-11 16:12:55,787:  INFO: stage_01_prepare_data]:  define Training kwargs
+[2022-08-11 16:12:55,788:  INFO: stage_01_prepare_data]:  Updating device configurationas per cuda availability
+[2022-08-11 16:12:55,836:  INFO: stage_01_prepare_data]:  transforms added
+[2022-08-11 16:12:55,836:  INFO: stage_01_prepare_data]:  downloading training and testing data
+[2022-08-11 16:12:55,879:  INFO: stage_01_prepare_data]:  defining training and testing data loader
+[2022-08-11 16:12:55,880:  INFO: all_utils]:  Directory is created at artifacts/model_config
+[2022-08-11 16:12:56,182:  INFO: model_utils]:  model_config is saved at artifacts/model_config/train_loader.bin
+[2022-08-11 16:12:56,241:  INFO: model_utils]:  model_config is saved at artifacts/model_config/test_loader.bin
+[2022-08-11 16:12:56,241:  INFO: stage_01_prepare_data]:  Stage one completed!!! >>>>>
+
+[2022-08-11 16:13:00,892:  INFO: stage_02_train]:  >>>>> Stage two started
+[2022-08-11 16:13:00,895:  INFO: all_utils]:  yaml file: configs/config.yaml loaded successfully
+[2022-08-11 16:13:00,895:  INFO: stage_02_train]:  Updating device configurationas per cuda availability
+[2022-08-11 16:13:03,382:  INFO: model_utils]:  model_config is loaded from artifacts/model_config/train_loader.bin
+[2022-08-11 16:13:17,920:  ERROR: stage_02_train]:  stat: path should be string, bytes, os.PathLike or integer, not dict
+Traceback (most recent call last):
+  File "src/stage_02_train.py", line 87, in <module>
+    train(config_path = parsed_args.config)
+  File "src/stage_02_train.py", line 76, in train
+    mlflow.log_artifacts(config['params'])
+  File "/media/dev_ashish/DATA1/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/env/lib/python3.7/site-packages/mlflow/tracking/fluent.py", line 807, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "/media/dev_ashish/DATA1/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/env/lib/python3.7/site-packages/mlflow/tracking/client.py", line 1110, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "/media/dev_ashish/DATA1/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/env/lib/python3.7/site-packages/mlflow/tracking/_tracking_service/client.py", line 431, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "/media/dev_ashish/DATA1/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/env/lib/python3.7/site-packages/mlflow/store/artifact/local_artifact_repo.py", line 58, in log_artifacts
+    dir_util.copy_tree(src=local_dir, dst=artifact_dir, preserve_mode=0, preserve_times=0)
+  File "/media/dev_ashish/DATA1/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/env/lib/python3.7/site-packages/setuptools/_distutils/dir_util.py", line 122, in copy_tree
+    if not dry_run and not os.path.isdir(src):
+  File "/media/dev_ashish/DATA1/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/env/lib/python3.7/genericpath.py", line 42, in isdir
+    st = os.stat(s)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not dict
+[2022-08-11 16:15:40,088:  INFO: stage_01_prepare_data]:  >>>>> Stage one started
+[2022-08-11 16:15:40,091:  INFO: all_utils]:  yaml file: configs/config.yaml loaded successfully
+[2022-08-11 16:15:40,091:  INFO: stage_01_prepare_data]:  define Training kwargs
+[2022-08-11 16:15:40,091:  INFO: stage_01_prepare_data]:  Updating device configurationas per cuda availability
+[2022-08-11 16:15:40,140:  INFO: stage_01_prepare_data]:  transforms added
+[2022-08-11 16:15:40,141:  INFO: stage_01_prepare_data]:  downloading training and testing data
+[2022-08-11 16:15:40,189:  INFO: stage_01_prepare_data]:  defining training and testing data loader
+[2022-08-11 16:15:40,191:  INFO: all_utils]:  Directory is created at artifacts/model_config
+[2022-08-11 16:15:40,616:  INFO: model_utils]:  model_config is saved at artifacts/model_config/train_loader.bin
+[2022-08-11 16:15:40,691:  INFO: model_utils]:  model_config is saved at artifacts/model_config/test_loader.bin
+[2022-08-11 16:15:40,691:  INFO: stage_01_prepare_data]:  Stage one completed!!! >>>>>
+
+[2022-08-11 16:15:45,277:  INFO: stage_02_train]:  >>>>> Stage two started
+[2022-08-11 16:15:45,280:  INFO: all_utils]:  yaml file: configs/config.yaml loaded successfully
+[2022-08-11 16:15:45,280:  INFO: stage_02_train]:  Updating device configurationas per cuda availability
+[2022-08-11 16:15:47,788:  INFO: model_utils]:  model_config is loaded from artifacts/model_config/train_loader.bin
+[2022-08-11 16:16:09,641:  INFO: stage_02_train]:  Stage two completed!!! >>>>>
+
+[2022-08-11 16:19:43,696:  INFO: stage_01_prepare_data]:  >>>>> Stage one started
+[2022-08-11 16:19:43,698:  INFO: all_utils]:  yaml file: configs/config.yaml loaded successfully
+[2022-08-11 16:19:43,698:  INFO: stage_01_prepare_data]:  define Training kwargs
+[2022-08-11 16:19:43,699:  INFO: stage_01_prepare_data]:  Updating device configurationas per cuda availability
+[2022-08-11 16:19:43,752:  INFO: stage_01_prepare_data]:  transforms added
+[2022-08-11 16:19:43,752:  INFO: stage_01_prepare_data]:  downloading training and testing data
+[2022-08-11 16:19:43,796:  INFO: stage_01_prepare_data]:  defining training and testing data loader
+[2022-08-11 16:19:43,797:  INFO: all_utils]:  Directory is created at artifacts/model_config
+[2022-08-11 16:19:44,105:  INFO: model_utils]:  model_config is saved at artifacts/model_config/train_loader.bin
+[2022-08-11 16:19:44,165:  INFO: model_utils]:  model_config is saved at artifacts/model_config/test_loader.bin
+[2022-08-11 16:19:44,165:  INFO: stage_01_prepare_data]:  Stage one completed!!! >>>>>
+
+[2022-08-11 16:19:48,747:  INFO: stage_02_train]:  >>>>> Stage two started
+[2022-08-11 16:19:48,754:  INFO: all_utils]:  yaml file: configs/config.yaml loaded successfully
+[2022-08-11 16:19:48,754:  INFO: stage_02_train]:  Updating device configurationas per cuda availability
+[2022-08-11 16:19:51,466:  INFO: model_utils]:  model_config is loaded from artifacts/model_config/train_loader.bin
+[2022-08-11 16:20:05,686:  ERROR: stage_02_train]:  stat: path should be string, bytes, os.PathLike or integer, not dict
+Traceback (most recent call last):
+  File "src/stage_02_train.py", line 87, in <module>
+    train(config_path = parsed_args.config)
+  File "src/stage_02_train.py", line 76, in train
+    mlflow.log_artifacts(config['params'])
+  File "/media/dev_ashish/DATA1/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/env/lib/python3.7/site-packages/mlflow/tracking/fluent.py", line 807, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "/media/dev_ashish/DATA1/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/env/lib/python3.7/site-packages/mlflow/tracking/client.py", line 1110, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "/media/dev_ashish/DATA1/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/env/lib/python3.7/site-packages/mlflow/tracking/_tracking_service/client.py", line 431, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "/media/dev_ashish/DATA1/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/env/lib/python3.7/site-packages/mlflow/store/artifact/local_artifact_repo.py", line 58, in log_artifacts
+    dir_util.copy_tree(src=local_dir, dst=artifact_dir, preserve_mode=0, preserve_times=0)
+  File "/media/dev_ashish/DATA1/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/env/lib/python3.7/site-packages/setuptools/_distutils/dir_util.py", line 122, in copy_tree
+    if not dry_run and not os.path.isdir(src):
+  File "/media/dev_ashish/DATA1/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/env/lib/python3.7/genericpath.py", line 42, in isdir
+    st = os.stat(s)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not dict
+[2022-08-11 17:05:50,636:  INFO: stage_01_prepare_data]:  >>>>> Stage one started
+[2022-08-11 17:05:50,639:  INFO: all_utils]:  yaml file: configs/config.yaml loaded successfully
+[2022-08-11 17:05:50,639:  INFO: stage_01_prepare_data]:  define Training kwargs
+[2022-08-11 17:05:50,639:  INFO: stage_01_prepare_data]:  Updating device configurationas per cuda availability
+[2022-08-11 17:05:50,690:  INFO: stage_01_prepare_data]:  transforms added
+[2022-08-11 17:05:50,690:  INFO: stage_01_prepare_data]:  downloading training and testing data
+[2022-08-11 17:05:50,738:  INFO: stage_01_prepare_data]:  defining training and testing data loader
+[2022-08-11 17:05:50,739:  INFO: all_utils]:  Directory is created at artifacts/model_config
+[2022-08-11 17:05:51,090:  INFO: model_utils]:  model_config is saved at artifacts/model_config/train_loader.bin
+[2022-08-11 17:05:51,167:  INFO: model_utils]:  model_config is saved at artifacts/model_config/test_loader.bin
+[2022-08-11 17:05:51,167:  INFO: stage_01_prepare_data]:  Stage one completed!!! >>>>>
+
+[2022-08-11 17:05:56,305:  INFO: stage_02_train]:  >>>>> Stage two started
+[2022-08-11 17:05:56,308:  INFO: all_utils]:  yaml file: configs/config.yaml loaded successfully
+[2022-08-11 17:05:56,308:  INFO: stage_02_train]:  Updating device configurationas per cuda availability
+[2022-08-11 17:05:59,280:  INFO: model_utils]:  model_config is loaded from artifacts/model_config/train_loader.bin
+[2022-08-11 17:06:14,572:  ERROR: stage_02_train]:  stat: path should be string, bytes, os.PathLike or integer, not dict
+Traceback (most recent call last):
+  File "src/stage_02_train.py", line 87, in <module>
+    train(config_path = parsed_args.config)
+  File "src/stage_02_train.py", line 76, in train
+    mlflow.log_artifacts(config['params'])
+  File "/media/dev_ashish/DATA1/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/env/lib/python3.7/site-packages/mlflow/tracking/fluent.py", line 807, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "/media/dev_ashish/DATA1/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/env/lib/python3.7/site-packages/mlflow/tracking/client.py", line 1110, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "/media/dev_ashish/DATA1/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/env/lib/python3.7/site-packages/mlflow/tracking/_tracking_service/client.py", line 431, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "/media/dev_ashish/DATA1/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/env/lib/python3.7/site-packages/mlflow/store/artifact/local_artifact_repo.py", line 58, in log_artifacts
+    dir_util.copy_tree(src=local_dir, dst=artifact_dir, preserve_mode=0, preserve_times=0)
+  File "/media/dev_ashish/DATA1/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/env/lib/python3.7/site-packages/setuptools/_distutils/dir_util.py", line 122, in copy_tree
+    if not dry_run and not os.path.isdir(src):
+  File "/media/dev_ashish/DATA1/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/env/lib/python3.7/genericpath.py", line 42, in isdir
+    st = os.stat(s)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not dict
+[2022-08-11 17:06:43,202:  INFO: stage_01_prepare_data]:  >>>>> Stage one started
+[2022-08-11 17:06:43,209:  INFO: all_utils]:  yaml file: configs/config.yaml loaded successfully
+[2022-08-11 17:06:43,209:  INFO: stage_01_prepare_data]:  define Training kwargs
+[2022-08-11 17:06:43,209:  INFO: stage_01_prepare_data]:  Updating device configurationas per cuda availability
+[2022-08-11 17:06:43,261:  INFO: stage_01_prepare_data]:  transforms added
+[2022-08-11 17:06:43,262:  INFO: stage_01_prepare_data]:  downloading training and testing data
+[2022-08-11 17:06:43,322:  INFO: stage_01_prepare_data]:  defining training and testing data loader
+[2022-08-11 17:06:43,323:  INFO: all_utils]:  Directory is created at artifacts/model_config
+[2022-08-11 17:06:43,684:  INFO: model_utils]:  model_config is saved at artifacts/model_config/train_loader.bin
+[2022-08-11 17:06:43,757:  INFO: model_utils]:  model_config is saved at artifacts/model_config/test_loader.bin
+[2022-08-11 17:06:43,757:  INFO: stage_01_prepare_data]:  Stage one completed!!! >>>>>
+
+[2022-08-11 17:06:59,345:  INFO: stage_01_prepare_data]:  >>>>> Stage one started
+[2022-08-11 17:06:59,351:  INFO: all_utils]:  yaml file: configs/config.yaml loaded successfully
+[2022-08-11 17:06:59,351:  INFO: stage_01_prepare_data]:  define Training kwargs
+[2022-08-11 17:06:59,351:  INFO: stage_01_prepare_data]:  Updating device configurationas per cuda availability
+[2022-08-11 17:06:59,403:  INFO: stage_01_prepare_data]:  transforms added
+[2022-08-11 17:06:59,403:  INFO: stage_01_prepare_data]:  downloading training and testing data
+[2022-08-11 17:06:59,448:  INFO: stage_01_prepare_data]:  defining training and testing data loader
+[2022-08-11 17:06:59,448:  INFO: all_utils]:  Directory is created at artifacts/model_config
+[2022-08-11 17:06:59,785:  INFO: model_utils]:  model_config is saved at artifacts/model_config/train_loader.bin
+[2022-08-11 17:06:59,847:  INFO: model_utils]:  model_config is saved at artifacts/model_config/test_loader.bin
+[2022-08-11 17:06:59,848:  INFO: stage_01_prepare_data]:  Stage one completed!!! >>>>>
+
+[2022-08-11 17:07:04,293:  INFO: stage_02_train]:  >>>>> Stage two started
+[2022-08-11 17:07:04,296:  INFO: all_utils]:  yaml file: configs/config.yaml loaded successfully
+[2022-08-11 17:07:04,297:  INFO: stage_02_train]:  Updating device configurationas per cuda availability
+[2022-08-11 17:07:07,212:  INFO: model_utils]:  model_config is loaded from artifacts/model_config/train_loader.bin
+[2022-08-11 17:07:28,851:  INFO: stage_02_train]:  Stage two completed!!! >>>>>
+

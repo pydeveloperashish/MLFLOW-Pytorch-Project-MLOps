@@ -1,0 +1,17 @@
+name: MLFLOW-Pytorch-Project
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    command: "python3 src/main.py"
+  
+  stage_01:
+    parameters:
+      config: {type: "string", default: configs/config.yaml}
+    command: "python3 src/stage_01_prepare_data.py --config={config}"
+
+  stage_02:
+    parameters:
+      config: {type: "string", default: configs/config.yaml}
+    command: "python3 src/stage_02_train.py --config={config}"

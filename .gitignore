@@ -3,3 +3,4 @@ ENV/
 .env/
 data/
 *.bin
+mlruns/

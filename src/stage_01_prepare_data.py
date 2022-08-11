@@ -70,8 +70,6 @@ def get_data(config_path):
     
     save_binary(train_loader, train_loader_bin_filepath)
     save_binary(test_loader, test_loader_bin_filepath)
-    
-    
                 
 
 if __name__ == "__main__":
