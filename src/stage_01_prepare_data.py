@@ -1,4 +1,6 @@
-from src.utils.all_utils import  read_yaml, copy_file
+from nntplib import ArticleInfo
+from src.utils.all_utils import  create_directory, read_yaml
+from src.utils.model_utils import save_binary
 import argparse
 import os
 from pprint import pprint
@@ -56,6 +58,19 @@ def get_data(config_path):
     logging.info("defining training and testing data loader")
     train_loader = torch.utils.data.DataLoader(train, **train_kwargs)
     test_loader = torch.utils.data.DataLoader(test, **test_kwargs)
+    
+    artifacts = config['artifacts']
+    model_config_filepath = os.path.join(artifacts['artifacts'], artifacts["model_config_dir"])
+    create_directory([model_config_filepath])
+    train_loader_bin_file = artifacts["train_loader_bin"]
+    test_loader_bin_file = artifacts["test_loader_bin"]
+    
+    train_loader_bin_filepath = os.path.join(model_config_filepath, train_loader_bin_file)
+    test_loader_bin_filepath = os.path.join(model_config_filepath, test_loader_bin_file)
+    
+    save_binary(train_loader, train_loader_bin_filepath)
+    save_binary(test_loader, test_loader_bin_filepath)
+    
     
                 
 
