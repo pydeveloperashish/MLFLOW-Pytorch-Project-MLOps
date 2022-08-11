@@ -65,3 +65,4 @@ def save_json(path, data):
     with open(path, 'w') as f:
         json.dump(data, f, indent = 4)
     logging.info(f"json file saved at: {path}")        
+    
