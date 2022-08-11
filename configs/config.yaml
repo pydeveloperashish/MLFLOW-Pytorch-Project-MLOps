@@ -1,7 +1,20 @@
 params:
   TEST_BATCH_SIZE: 1000
   BATCH_SIZE: 32
+  GAMMA : 0.7
+  SEED : 42
+  LOG_INTERVAL : 10
+  DRY_RUN : False
+  LR : 0.01
+  EPOCHS : 1
   
+artifacts: 
+  artifacts: artifacts
+  model_config_dir: model_config
+  test_loader_bin: test_loader.bin
+  train_loader_bin: train_loader.bin
+
+
 source_data_dirs:
   data: data
   

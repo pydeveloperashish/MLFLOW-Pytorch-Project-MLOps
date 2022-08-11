@@ -8,5 +8,6 @@ tqdm
 PyYAML
 boto3
 mlflow
+joblib
 
 -e .    # To install setup.py to recognise src folder as package
