@@ -1,0 +1,7 @@
+matplotlib
+numpy
+pandas
+tqdm
+PyYAML
+boto3
+mlflow

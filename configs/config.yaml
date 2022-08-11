@@ -1,0 +1,7 @@
+params:
+  TEST_BATCH_SIZE: 1000
+  BATCH_SIZE: 32
+  
+source_data_dirs:
+  data: data
+  

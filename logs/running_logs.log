@@ -1,0 +1,60 @@
+[2022-08-11 11:52:49,342:  INFO: stage_01_prepare_data]:  >>>>> Stage one started
+[2022-08-11 11:52:49,343:  ERROR: stage_01_prepare_data]:  name 'read_yaml' is not defined
+Traceback (most recent call last):
+  File "src/stage_01_prepare_data.py", line 67, in <module>
+    get_data(config_path = parsed_args.config)
+  File "src/stage_01_prepare_data.py", line 29, in get_data
+    config = read_yaml(config_path)
+NameError: name 'read_yaml' is not defined
+[2022-08-11 12:02:10,860:  INFO: stage_01_prepare_data]:  >>>>> Stage one started
+[2022-08-11 12:02:10,860:  ERROR: stage_01_prepare_data]:  [Errno 2] No such file or directory: 'config/config.yaml'
+Traceback (most recent call last):
+  File "src/stage_01_prepare_data.py", line 68, in <module>
+    get_data(config_path = parsed_args.config)
+  File "src/stage_01_prepare_data.py", line 30, in get_data
+    config = read_yaml(config_path)
+  File "/media/dev_ashish/DATA/Python37/INeuron-Classes/ML-OPS-Classes/MLFLOW-Classes/MLFLOW-Pytorch-Project/src/utils/all_utils.py", line 13, in read_yaml
+    with open(path_to_yaml) as yaml_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'config/config.yaml'
+[2022-08-11 12:02:51,383:  INFO: stage_01_prepare_data]:  >>>>> Stage one started
+[2022-08-11 12:02:51,385:  INFO: all_utils]:  yaml file: configs/config.yaml loaded successfully
+[2022-08-11 12:02:51,385:  INFO: stage_01_prepare_data]:  define Training kwargs
+[2022-08-11 12:02:51,386:  INFO: stage_01_prepare_data]:  Updating device configurationas per cuda availability
+[2022-08-11 12:02:51,418:  INFO: stage_01_prepare_data]:  transforms added
+[2022-08-11 12:02:51,418:  ERROR: stage_01_prepare_data]:  local variable 'transforms' referenced before assignment
+Traceback (most recent call last):
+  File "src/stage_01_prepare_data.py", line 68, in <module>
+    get_data(config_path = parsed_args.config)
+  File "src/stage_01_prepare_data.py", line 48, in get_data
+    transforms = transforms.Compose(
+UnboundLocalError: local variable 'transforms' referenced before assignment
+[2022-08-11 12:03:45,286:  INFO: stage_01_prepare_data]:  >>>>> Stage one started
+[2022-08-11 12:03:45,288:  INFO: all_utils]:  yaml file: configs/config.yaml loaded successfully
+[2022-08-11 12:03:45,288:  INFO: stage_01_prepare_data]:  define Training kwargs
+[2022-08-11 12:03:45,288:  INFO: stage_01_prepare_data]:  Updating device configurationas per cuda availability
+[2022-08-11 12:03:45,320:  INFO: stage_01_prepare_data]:  transforms added
+[2022-08-11 12:03:45,320:  ERROR: stage_01_prepare_data]:  local variable 'transforms' referenced before assignment
+Traceback (most recent call last):
+  File "src/stage_01_prepare_data.py", line 68, in <module>
+    get_data(config_path = parsed_args.config)
+  File "src/stage_01_prepare_data.py", line 48, in get_data
+    transforms = transforms.Compose(
+UnboundLocalError: local variable 'transforms' referenced before assignment
+[2022-08-11 12:05:00,327:  INFO: stage_01_prepare_data]:  >>>>> Stage one started
+[2022-08-11 12:05:00,328:  INFO: all_utils]:  yaml file: configs/config.yaml loaded successfully
+[2022-08-11 12:05:00,328:  INFO: stage_01_prepare_data]:  define Training kwargs
+[2022-08-11 12:05:00,328:  INFO: stage_01_prepare_data]:  Updating device configurationas per cuda availability
+[2022-08-11 12:05:00,357:  INFO: stage_01_prepare_data]:  transforms added
+[2022-08-11 12:05:00,358:  INFO: stage_01_prepare_data]:  downloading training and testing data
+[2022-08-11 12:05:00,547:  INFO: stage_01_prepare_data]:  defining training and testing data loader
+[2022-08-11 12:05:00,551:  INFO: stage_01_prepare_data]:  Stage one completed!!! >>>>>
+
+[2022-08-11 13:59:49,508:  INFO: stage_01_prepare_data]:  >>>>> Stage one started
+[2022-08-11 13:59:49,510:  INFO: all_utils]:  yaml file: configs/config.yaml loaded successfully
+[2022-08-11 13:59:49,511:  INFO: stage_01_prepare_data]:  define Training kwargs
+[2022-08-11 13:59:49,511:  INFO: stage_01_prepare_data]:  Updating device configurationas per cuda availability
+[2022-08-11 13:59:49,573:  INFO: stage_01_prepare_data]:  transforms added
+[2022-08-11 13:59:49,574:  INFO: stage_01_prepare_data]:  downloading training and testing data
+[2022-08-11 13:59:50,565:  INFO: stage_01_prepare_data]:  defining training and testing data loader
+[2022-08-11 13:59:50,566:  INFO: stage_01_prepare_data]:  Stage one completed!!! >>>>>
+
